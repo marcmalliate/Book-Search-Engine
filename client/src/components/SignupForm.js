@@ -5,15 +5,13 @@ import { useMutation } from "@apollo/react-hooks";
 import { ADD_USER } from "../utils/mutations";
 
 const SignupForm = () => {
-  // Sets initial form state
   const [userFormData, setUserFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
-  // Sets state for form validation
+
   const [validated] = useState(false);
-  // Sets state for alert
   const [showAlert, setShowAlert] = useState(false);
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
